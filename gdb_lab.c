@@ -2,7 +2,6 @@
 #include "gdb_lab.h"
 #include "csbrk.h"
 
-
 int main() {
 
     warehouse_shelf_t *dummy_shelf = (warehouse_shelf_t *) csbrk(sizeof(warehouse_shelf_t));
@@ -22,7 +21,8 @@ int main() {
     // now to traverse the linked list
     warehouse_shelf_t *current = dummy_shelf;
     while(current != NULL) {
-        current = current->next_shelf;
+        current = current->next_shelf; 
+        // BREAK HERE
         printf("Size of this shelf: %ld\n", current->shelf_size);
 
     }
@@ -48,6 +48,7 @@ int main() {
     // Now let's print everything again
     current = dummy_shelf;
     while(current != NULL) {
+        // BREAK HERE
         printf("Size of this shelf: %ld\n", current->shelf_size);
         current = current->next_shelf;
 

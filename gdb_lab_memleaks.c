@@ -24,7 +24,11 @@ int main() {
         
         printf("Size of this shelf: %ld\n", current->shelf_size);
         current = current->next_shelf; // We have to move forward *after* referencing the current node
+    
     }
+
+
+
 
     printf("====================\n");
 
@@ -43,6 +47,7 @@ int main() {
     }
 
     current->next_shelf = NULL;
+    // Set the last pointer to NULL
 
     // Now let's print everything again
     current = dummy_shelf;
